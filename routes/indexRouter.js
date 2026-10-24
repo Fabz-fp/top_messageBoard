@@ -22,4 +22,10 @@ router.get("/", (req, res) => {
   });
 });
 
+router.get("/new", (req, res) => {
+  res.render("form", {
+    title: "Create a New Message",
+  });
+});
+
 module.exports = router;
