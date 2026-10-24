@@ -3,7 +3,7 @@
 A simple message board built with Node.js, Express and EJS as part of The Odin Project.
 
 ## Live Demo
-Coming soon.
+[View the live application](https://top-messageboard.onrender.com/)
 
 ## Features
 
@@ -69,7 +69,6 @@ Open http://localhost:3000 in your browser.
 │   ├── form.ejs
 │   ├── index.ejs
 │   └── message.ejs
-├── .env.example
 ├── .gitignore
 ├── app.js
 ├── package.json
