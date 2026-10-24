@@ -61,8 +61,8 @@ Open http://localhost:3000 in your browser.
 
 ```
 .
-├── controllers/
 ├── public/
+│   └── styles.css
 ├── routes/
 │   └── indexRouter.js
 ├── views/
