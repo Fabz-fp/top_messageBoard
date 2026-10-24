@@ -42,4 +42,18 @@ router.post("/new", (req, res) => {
   res.redirect("/");
 });
 
+router.get("/message/:messageIndex", (req, res) => {
+  const messageIndex = Number(req.params.messageIndex);
+  const message = messages[messageIndex];
+
+  if (!Number.isInteger(messageIndex) || !message) {
+    return res.status(404).send("Message not found");
+  }
+
+  res.render("message", {
+    title: "Message Details",
+    message: message,
+  });
+});
+
 module.exports = router;
