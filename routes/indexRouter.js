@@ -28,4 +28,18 @@ router.get("/new", (req, res) => {
   });
 });
 
+router.post("/new", (req, res) => {
+  const { author, messageText } = req.body;
+
+  const newMessage = {
+    text: messageText,
+    user: author,
+    added: new Date(),
+  };
+
+  messages.push(newMessage);
+
+  res.redirect("/");
+});
+
 module.exports = router;
