@@ -9,6 +9,14 @@
   <body>
     <h1><%= title %></h1>
 
+    <% if (errors.length > 0) { %>
+      <ul>
+        <% errors.forEach((error) => { %>
+          <li><%= error %></li>
+        <% }) %>
+      </ul>
+    <% } %>
+
     <form method="POST" action="/new">
       <div>
         <label for="author">Your name:</label>
@@ -16,6 +24,8 @@
           type="text"
           id="author"
           name="author"
+          value="<%= formData.author %>"
+          maxlength="255"
           required
         />
       </div>
@@ -25,8 +35,9 @@
         <textarea
           id="messageText"
           name="messageText"
+          maxlength="5000"
           required
-        ></textarea>
+        ><%= formData.messageText %></textarea>
       </div>
 
       <button type="submit">Send Message</button>

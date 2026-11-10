@@ -12,13 +12,13 @@
     <a href="/new">Create a New Message</a>
 
     <ul>
-      <% messages.forEach((message, index) => { %>
+      <% messages.forEach((message) => { %>
         <li>
-          <p><strong>Author:</strong> <%= message.user %></p>
+          <p><strong>Author:</strong> <%= message.username %></p>
           <p><strong>Message:</strong> <%= message.text %></p>
           <p><strong>Added:</strong> <%= message.added.toLocaleString() %></p>
 
-          <a href="/message/<%= index %>">Open</a>
+          <a href="/message/<%= message.id %>">Open</a>
         </li>
       <% }); %>
     </ul>
